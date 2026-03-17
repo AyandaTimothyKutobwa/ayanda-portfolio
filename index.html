@@ -1,0 +1,242 @@
+export default function AyandaWebsite() {
+  const openExternal = (url) => {
+    if (typeof window !== "undefined") {
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+  const skills = [
+    "Cybersecurity",
+    "Network Security",
+    "Incident Response",
+    "IT Support",
+    "Telecommunications",
+    "Technical Problem Solving",
+  ];
+
+  const highlights = [
+    {
+      title: "Cybersecurity Focus",
+      text: "Master’s student in Cybersecurity at Pace University with a forward-looking interest in network defense, security operations, and threat analysis.",
+    },
+    {
+      title: "Hands-On IT Experience",
+      text: "Professional experience supporting IT operations, technical troubleshooting, infrastructure support, and service delivery in real-world environments.",
+    },
+    {
+      title: "Global Perspective",
+      text: "Originally from Zimbabwe and currently based in New Jersey, building a career with the goal of creating global cybersecurity impact in the U.S. and back home.",
+    },
+  ];
+
+  const experience = [
+    {
+      role: "Educational Media Student Assistant",
+      org: "Pace University",
+      period: "Current",
+      points: [
+        "Support AV and technical operations across university environments.",
+        "Troubleshoot classroom and media technology issues under time-sensitive conditions.",
+        "Deliver reliable frontline IT support for faculty, staff, and students.",
+      ],
+    },
+    {
+      role: "IT Technician",
+      org: "Axis Solutions Africa",
+      period: "Dec 2022 – Nov 2024",
+      points: [
+        "Provided technical support across network and systems environments.",
+        "Worked with network protocols, infrastructure security, and operational troubleshooting.",
+        "Contributed to service reliability and issue resolution for business operations.",
+      ],
+    },
+  ];
+
+  const projects = [
+    {
+      name: "Cybersecurity Portfolio Development",
+      desc: "Building a professional portfolio that showcases cybersecurity, IT support, and technical problem-solving capabilities for recruiters and employers.",
+    },
+    {
+      name: "Future Security Career Path",
+      desc: "Positioning toward cybersecurity analyst and network security specialist roles with a long-term strategy to build intelligence-driven security companies.",
+    },
+    {
+      name: "Technical Brand Presence",
+      desc: "Expanding a digital presence through GitHub, LinkedIn, and project-based storytelling to strengthen market credibility.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      <section className="relative overflow-hidden border-b border-white/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.22),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(14,165,233,0.18),transparent_30%)]" />
+        <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <p className="mb-4 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1 text-sm tracking-wide text-cyan-200">
+                Cybersecurity • IT Support • Network Security
+              </p>
+              <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                Ayanda Timothy Kutobwa
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                I am a Master’s student in Cybersecurity at Pace University, building a career at the intersection of cybersecurity, technical support, and network defense. My objective is to create measurable impact through secure systems, strong operational execution, and long-term innovation.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href="mailto:akutobwa@gmail.com"
+                  className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-slate-950 shadow-lg transition hover:scale-[1.02]"
+                >
+                  Contact Me
+                </a>
+                <button
+                  type="button"
+                  onClick={() => openExternal("https://www.linkedin.com/in/ayandatimothykutobwa")}
+                  className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
+                >
+                  LinkedIn
+                </button>
+                <button
+                  type="button"
+                  onClick={() => openExternal("https://github.com/ayandatimothykutobwa")}
+                  className="rounded-2xl border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/5"
+                >
+                  GitHub
+                </button>
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-slate-900/80 p-5">
+                  <p className="text-sm text-slate-400">Location</p>
+                  <p className="mt-2 text-lg font-semibold">Jersey City, New Jersey</p>
+                </div>
+                <div className="rounded-2xl bg-slate-900/80 p-5">
+                  <p className="text-sm text-slate-400">Education</p>
+                  <p className="mt-2 text-lg font-semibold">M.S. Cybersecurity</p>
+                </div>
+                <div className="rounded-2xl bg-slate-900/80 p-5">
+                  <p className="text-sm text-slate-400">Phone</p>
+                  <p className="mt-2 text-lg font-semibold">+1 (347) 650-1653</p>
+                </div>
+                <div className="rounded-2xl bg-slate-900/80 p-5">
+                  <p className="text-sm text-slate-400">Long-Term Goal</p>
+                  <p className="mt-2 text-lg font-semibold">Global Cyber Impact</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <div className="mb-8 max-w-2xl">
+          <h2 className="text-3xl font-bold">Core Value Proposition</h2>
+          <p className="mt-3 text-slate-300">
+            This platform is designed to position my background, technical capabilities, and professional direction in a clear, credible, and market-ready format.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {highlights.map((item) => (
+            <div key={item.title} className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 shadow-xl">
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="mt-3 leading-7 text-slate-300">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-6 lg:px-10">
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl">
+            <h2 className="text-3xl font-bold">Professional Experience</h2>
+            <div className="mt-8 space-y-8">
+              {experience.map((job) => (
+                <div key={job.role} className="border-l-2 border-cyan-400/40 pl-5">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                    <h3 className="text-xl font-semibold">{job.role}</h3>
+                    <span className="text-sm text-slate-400">{job.period}</span>
+                  </div>
+                  <p className="mt-1 text-cyan-200">{job.org}</p>
+                  <ul className="mt-4 space-y-2 text-slate-300">
+                    {job.points.map((point) => (
+                      <li key={point}>• {point}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl">
+              <h2 className="text-3xl font-bold">Skills</h2>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-100"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl">
+              <h2 className="text-3xl font-bold">Education</h2>
+              <div className="mt-5 space-y-4 text-slate-300">
+                <div>
+                  <p className="font-semibold text-white">Pace University</p>
+                  <p>Master of Science in Cybersecurity</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-white">Academic Background</p>
+                  <p>Bachelor’s Degree in Telecommunications Engineering</p>
+                  <p>Diploma in Telecommunications Engineering</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <div className="mb-8 max-w-2xl">
+          <h2 className="text-3xl font-bold">Strategic Projects</h2>
+          <p className="mt-3 text-slate-300">
+            A snapshot of the initiatives shaping my professional brand and long-term trajectory.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {projects.map((project) => (
+            <div key={project.name} className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6 shadow-xl">
+              <h3 className="text-xl font-semibold">{project.name}</h3>
+              <p className="mt-3 leading-7 text-slate-300">{project.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-slate-900/70">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+          <div className="flex flex-col gap-6 rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-xl lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h2 className="text-3xl font-bold">Let’s Build Something Impactful</h2>
+              <p className="mt-3 max-w-2xl text-slate-300">
+                I am open to opportunities in cybersecurity, IT support, and technical operations where I can contribute, grow, and deliver value at a high standard.
+              </p>
+            </div>
+            <a
+              href="mailto:akutobwa@gmail.com"
+              className="inline-flex rounded-2xl bg-cyan-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:scale-[1.02]"
+            >
+              Start a Conversation
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
